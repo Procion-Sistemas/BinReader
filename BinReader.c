@@ -23,7 +23,7 @@ int main(int argc,char *argv[])
 		while(1)
 		{
 			if(view==0)
-				printf("|",line);
+				printf("|");
 			byte = fgetc(file);
 			if(byte == -1)
 				break;
