@@ -2,7 +2,7 @@
 <p>
   Can Print hexadecimal or ascii printable bytes of a binary executable file.<br>
   Compile with gcc BinReader.c -o BinReader<br>
-  Execute with ./BinReader <file> <arg><br>
+  Execute with ./BinReader arg file<br>
   Execute ./BinReader to see the helper screen<br>
   </p>
 <h1 align="center">Screen helper</h1>
