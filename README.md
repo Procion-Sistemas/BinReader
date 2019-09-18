@@ -11,8 +11,8 @@
 		BinReader binary [-c || -b || -x ]<br>
 			<ul>
         <li><-c> read the binary file on ascii-char mode<br></li>
-          <li><-b> read the binary file on bits mode<br></li>
-          <li><-x> read the binary file on hexa mode <strong>[coming soon]</strong><br></li>
+          <li><-b> read the binary file on bits mode <strong>[coming soon]</strong><br></li>
+          <li><-x> read the binary file on hexa mode<br></li>
             </ul>
   </p>
   
