@@ -16,7 +16,7 @@ int main(int argc,char *argv[])
 		help();
 		exit(1);
 	}
-	file = fopen(argv[1],"rb");
+	file = fopen(argv[2],"rb");
 	args(argc,&argv[0]);
 	if(shar == 1)
 	{
@@ -65,7 +65,8 @@ int main(int argc,char *argv[])
 void args(int argc, char*argv[])
 {
 	int cont;
-	char *arguments[] = {"-b","-x","-c"};
+	void help();
+	char *arguments[] = {"-b","-x","-c","-h"};
 	for(cont=0;cont<argc;cont++)
 	{	
 		if(strcmp(argv[cont],arguments[0])==0)
@@ -82,6 +83,9 @@ void args(int argc, char*argv[])
 		{
 			shar = 1;
 		}
+		else
+		if(strcmp(argv[cont],arguments[3])==0)
+			help();
 	}
 }
 void help()
@@ -89,7 +93,7 @@ void help()
 	int cont;
 	char *msgs[] = {"\n\n",
 				" [!] It's very simple, please use:\n",
-				" [?] BinReader binary [-c || -b || -x ]\n\n",
+				" [?] BinReader [-c || -b || -x || -h ] binary\n\n",
 				"  <-c> read the binary file on ascii-char mode\n",
 				"  <-b> read the binary file on bits mode\n",
 				"  <-x> read the binary file on hexa mode <coming soon>",
