@@ -8,7 +8,7 @@
 <h1 align="center">Screen helper</h1>
 	<p>		
       [!] It's very simple, please use:<br>
-			[?] BinReader binary [-c || -b || -x ]<br>
+		BinReader binary [-c || -b || -x ]<br>
 			<ul>
         <li><-c> read the binary file on ascii-char mode<br></li>
           <li><-b> read the binary file on bits mode<br></li>
