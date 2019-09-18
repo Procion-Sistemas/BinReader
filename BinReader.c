@@ -106,6 +106,6 @@ void form(int byte)
 	else
 	if(byte<=15)
 	{
-		printf("%x  ",byte);
+		printf("0%x ",byte);
 	}
 }
