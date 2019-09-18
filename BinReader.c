@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-unsigned int bin=0;
+static unsigned int bin=0;
 static unsigned int shar=0;
-unsigned int hexa=0;
+static unsigned int hexa=0;
 int main(int argc,char *argv[])
 {
 	void args(int,char**);
