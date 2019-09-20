@@ -5,7 +5,7 @@
   Execute with ./BinReader arg file<br>
   Execute ./BinReader to see the helper screen<br>
   </p>
-<h1 align="center">Screen helper</h1>
+<h1 align="center">Helper Screen</h1>
 	<p>		
       [!] It's very simple, please use:<br>
 		BinReader [-c || -b || -x ] binary_file <br>
