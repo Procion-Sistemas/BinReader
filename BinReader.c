@@ -6,18 +6,23 @@ static unsigned int shar=0;
 static unsigned int hexa=0;
 int main(int argc,char *argv[])
 {
-	void args(int,char**);
+	int args(int,char**);
 	void help();
 	void form(int);
-	int byte,view=0,line=0;;
+	int byte,view=0,line=0,file_position;
 	FILE *file;
 	if(argc!=3)
 	{
 		help();
 		exit(1);
 	}
-	file = fopen(argv[2],"rb");
-	args(argc,&argv[0]);
+	file_position = args(argc,&argv[0]);
+	file = fopen(argv[file_position],"rb");
+	if(file==NULL)
+	{
+		printf("cant open the binary file %s\n",argv[2]);
+		exit(1);
+	}
 	if(shar == 1)
 	{
 		while(1)
@@ -62,26 +67,35 @@ int main(int argc,char *argv[])
 		}
 	}
 }
-void args(int argc, char*argv[])
+int args(int argc, char*argv[])
 {
 	int cont;
 	void help();
 	char *arguments[] = {"-b","-x","-c","-h"};
-	for(cont=0;cont<argc;cont++)
+	for(cont=1;cont<argc;cont++)
 	{	
 		if(strcmp(argv[cont],arguments[0])==0)
 		{
 			bin = 1;
+			if(cont==1)
+				return 2;
+			return 1;
 		}
 		else
 		if(strcmp(argv[cont],arguments[1])==0)
 		{
 			hexa = 1;
+			if(cont==1)
+				return 2;
+			return 1;
 		}	
 		else
 		if(strcmp(argv[cont],arguments[2])==0)
 		{
 			shar = 1;
+			if(cont==1)
+				return 2;
+			return 1;
 		}
 		else
 		if(strcmp(argv[cont],arguments[3])==0)
@@ -112,3 +126,4 @@ void form(int byte)
 		printf("0%x ",byte);
 	}
 }
+
