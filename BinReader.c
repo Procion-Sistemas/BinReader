@@ -1,3 +1,8 @@
+/*
+*calisto 2019
+* this tool can open any binary file 
+* and print hexa or char bytes from it
+*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
