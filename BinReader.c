@@ -114,8 +114,8 @@ void help()
 				" [!] It's very simple, please use:\n",
 				" [?] BinReader [-c || -b || -x || -h ] binary\n\n",
 				"  <-c> read the binary file on ascii-char mode\n",
-				"  <-b> read the binary file on bits mode\n",
-				"  <-x> read the binary file on hexa mode <coming soon>",
+				"  <-b> read the binary file on bits mode <coming soon>\n",
+				"  <-x> read the binary file on hexa mode",
 				"\n\n"};
 	for(cont=0;cont<7;cont++)
 		printf("%s",msgs[cont]);
